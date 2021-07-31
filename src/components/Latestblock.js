@@ -1,5 +1,5 @@
 import React, { useState, useEffect  }  from 'react'
-import  { Wallet, utils, providers } from 'ethers';
+import  { utils, providers } from 'ethers';
 const { JsonRpcProvider } = providers;
 
 
@@ -18,7 +18,7 @@ export default function Latestblock() {
     const [gasLimit, setgasLimit] = useState(0);
     const [gasUsed, setgasUsed] = useState(0);
     const [timestamp, settimestamp] = useState(0);
-    const [transactions, settransactions] = useState(0);
+    const [transactions, settransactions] = useState([]);
 
     useEffect(() => {
         (async () => {
