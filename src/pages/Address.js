@@ -21,13 +21,14 @@ function Address() {
           const provider = new JsonRpcProvider("https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb");
           const blockChainAccount = await provider.getBalance(searchAccount)
           const addressCode = await provider.getCode(searchAccount);
+          const txCount = await provider.getTransactionCount(searchAccount);
+          settxcount(txCount);
           if(addressCode !== "0x") {
             settype('Contract')
             setcode(addressCode)
           }else{
             settype('EOA')
           }
-          console.log('account searched:',blockChainAccount);
           setbalance(utils.formatEther(blockChainAccount._hex));          
         })()
       }, [])
@@ -38,6 +39,7 @@ function Address() {
                 <h1>Account:</h1>
               <p>Balance: {balance}</p>
               <p>Type: {type}</p>
+              <p>Transactions Count:{txcount}</p>
               {code !== "0x"?(<p>Code: {code}</p>):(<p></p>)}              
             </div>
             <br/>
