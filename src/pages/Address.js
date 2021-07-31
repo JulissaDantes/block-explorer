@@ -28,6 +28,7 @@ function Address() {
                 <h1>Account:</h1>
               <p>Balance: {balance}</p>
             </div>
+            <br/>
             <button type="button" onClick={handleClick}>
                 Go home
             </button>
