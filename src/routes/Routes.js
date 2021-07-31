@@ -22,7 +22,7 @@ function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route paht="/" component={Dashboard} />
+        <Route path="/" component={Dashboard} />
       </Switch>
     </BrowserRouter>
   );
