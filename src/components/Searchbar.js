@@ -11,13 +11,12 @@ function SearchBar(){
     }
 
     function handleChange(e) {
-        console.log("Fruit Selected!!",e.value);
         setcriteria(e.value);
     }
 
     const options = [
         { value: 'address', label: 'Address' },
-        { value: 'block', label: 'Block' },
+        { value: 'block', label: 'Block Number' },
         { value: 'transaction', label: 'Transaction' }
       ]
     const [criteria, setcriteria] = useState("")

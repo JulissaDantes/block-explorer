@@ -47,16 +47,16 @@ export default function Latestblock() {
         <div>
              <p>Latest block:{number}</p>  
              Hash: {hash}<br/>
-             ParentHash: {parentHash}<br/>
+             Parent Hash: {parentHash}<br/>
              Nonce: {nonce}<br/>
-             TransactionsRoot: {transactionsRoot}<br/>
-             StateRoot: {stateRoot}<br/>
-             ReceiptsRoot: {receiptsRoot}<br/>
+             Transactions Root: {transactionsRoot}<br/>
+             State Root: {stateRoot}<br/>
+             Receipts Root: {receiptsRoot}<br/>
              Miner: {miner}<br/>
              Difficulty: {difficulty}<br/>
-             TotalDifficulty: {totalDifficulty}<br/>
-             GasLimit: {gasLimit}<br/>
-             GasUsed: {gasUsed}<br/>
+             Total Difficulty: {totalDifficulty}<br/>
+             Gas Limit: {gasLimit}<br/>
+             Gas Used: {gasUsed}<br/>
              Timestamp: {timestamp}<br/>
              Transactions hashes: {transactions.map((tx) => <div>{tx}</div>)}
         </div>
