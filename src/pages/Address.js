@@ -5,11 +5,20 @@ const { JsonRpcProvider } = providers;
 
 function Address() {
     const { search } = window.location;
+    const path = window.location.href.split("/");
     const [balance, setbalance] = useState(0);
     const [type, settype] = useState('')
     const [code, setcode] = useState('')
-    const [txcount, settxcount] = useState(0)
-    const searchAccount = new URLSearchParams(search).get('s');
+    const [txcount, settxcount] = useState(0);
+    let searchAccount ="";  
+    if(!search.toString().includes("?s=")){
+      searchAccount = path[path.length - 1];
+    }else{
+      searchAccount = new URLSearchParams(search).get('s');
+      console.log('type',typeof(searchAccount));
+    }    
+
+    console.log('searchAccount', searchAccount,'type',typeof(searchAccount));
     let history = useHistory();
 
     function handleClick() {
