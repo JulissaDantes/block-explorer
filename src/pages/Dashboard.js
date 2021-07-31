@@ -30,7 +30,7 @@ const useStyles= makeStyles(()=>({
     }
     }));
     
- function Dashboard(props) {
+ function Dashboard() {
     const classes= useStyles();
     return (
         <div className={classes.root}>
