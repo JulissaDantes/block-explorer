@@ -6,6 +6,9 @@ const { JsonRpcProvider } = providers;
 function Address() {
     const { search } = window.location;
     const [balance, setbalance] = useState(0);
+    const [type, settype] = useState('')
+    const [code, setcode] = useState('')
+    const [txcount, settxcount] = useState(0)
     const searchAccount = new URLSearchParams(search).get('s');
     let history = useHistory();
 
@@ -17,6 +20,13 @@ function Address() {
         (async () => {
           const provider = new JsonRpcProvider("https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb");
           const blockChainAccount = await provider.getBalance(searchAccount)
+          const addressCode = await provider.getCode(searchAccount);
+          if(addressCode !== "0x") {
+            settype('Contract')
+            setcode(addressCode)
+          }else{
+            settype('EOA')
+          }
           console.log('account searched:',blockChainAccount);
           setbalance(utils.formatEther(blockChainAccount._hex));          
         })()
@@ -27,6 +37,8 @@ function Address() {
             <div>
                 <h1>Account:</h1>
               <p>Balance: {balance}</p>
+              <p>Type: {type}</p>
+              {code !== "0x"?(<p>Code: {code}</p>):(<p></p>)}              
             </div>
             <br/>
             <button type="button" onClick={handleClick}>
