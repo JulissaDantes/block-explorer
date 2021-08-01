@@ -2,3 +2,17 @@ body{
     margin: 0;
     padding: 0px 30px 30px 30px;
 }
+
+.footer--pin{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: #04AA6D;
+    text-align: center;
+    color: honeydew;
+}
+
+.network-header{
+    color:#04AA6D;
+    text-align: center;
+}

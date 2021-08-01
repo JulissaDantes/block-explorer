@@ -3,6 +3,7 @@ import {Grid} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import Searchbar from "../components/Searchbar";
 import Latestblock from "../components/Latestblock";
+import brain from '../assets/img/brain.png'
 import Latesttxs from "../components/Latesttxs";
 import Select from 'react-select';
 import { bake_cookie, read_cookie} from 'sfcookies';
@@ -33,23 +34,28 @@ const useStyles= makeStyles(()=>({
     }
     const classes= useStyles();
     return (
-        <div className={classes.root}>
-            <h1>{network}</h1>
-            <Grid container spacing={3}>
-                <Grid item xs={6}>
-                    <Searchbar/>
+        <div>
+            <div className={classes.root}>
+                <h1 className="network-header">{network}</h1>
+                <Grid container spacing={3}>
+                    <Grid item xs={6}>
+                        <Searchbar/>
+                    </Grid>
+                    <Grid item xs={6}>
+                    <Select placeholder={<div>Select Network</div>} options={options} onChange={handleChange}></Select>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Latestblock/>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <Latesttxs/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={6}>
-                <Select placeholder={<div>Select Network</div>} options={options} onChange={handleChange}></Select>
-                </Grid>
-                <Grid item xs={12}>
-                    <Latestblock/>
-                </Grid>
-                <Grid item xs={12}>
-                    <Latesttxs/>
-                </Grid>
-            </Grid>
-        </div>
+            </div>
+            <footer className="footer--pin">
+                Powered by Julissa's Brain<img src={brain} alt="Brain" height="45"/>
+            </footer>
+      </div>
     )
 }
 
