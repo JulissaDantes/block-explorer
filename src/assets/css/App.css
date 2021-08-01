@@ -109,3 +109,8 @@ button {
   min-width: 95%;
   max-width: 95%;
 }
+
+.tx-display{
+  border-bottom: dotted;
+  margin-right: 5%;
+}

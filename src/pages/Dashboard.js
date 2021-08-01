@@ -38,11 +38,11 @@ const useStyles= makeStyles(()=>({
             <div className={classes.root}>
                 <h1 className="network-header">{network}</h1>
                 <Grid container spacing={3}>
-                    <Grid item xs={6}>
-                        <Searchbar/>
+                <Grid item xs={6}>
+                    <Select placeholder={<div>Select Network</div>} options={options} onChange={handleChange} width="50px"></Select>
                     </Grid>
                     <Grid item xs={6}>
-                    <Select placeholder={<div>Select Network</div>} options={options} onChange={handleChange} width="50px"></Select>
+                        <Searchbar/>
                     </Grid>
                     <Grid item xs={6}>
                         <Latestblock/>

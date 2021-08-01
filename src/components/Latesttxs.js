@@ -32,7 +32,7 @@ export default function Latesttxs() {
         <div className="App-container">
            <p className="section-header">Latest transactions </p> 
             {transactions.map((transaction) => (
-            <div key={transaction.hash}>
+            <div key={transaction.hash} className="tx-display">
                 <p><b>From</b>: {transaction.from}</p>
                 <p><b>To</b>: {transaction.to}</p>
                 <p><b>Value</b>: {transaction.value}</p>
