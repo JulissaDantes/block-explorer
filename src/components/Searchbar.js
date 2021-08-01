@@ -19,10 +19,10 @@ function SearchBar(){
         <div className="search-container">                
             <Select placeholder={<div>Select Search Criteria</div>} options={options} onChange={handleChange}></Select>
             <form action={"/"+criteria} method="get" >
-                <input
+                <input className="input"
                     type="text"
                     id="header-search"
-                    placeholder="Search by transaction hash/Block Number/Account"
+                    placeholder="Type here transaction hash/Block Number/Address"
                     name="s" 
                 />
                 <button type="submit" className="go-home-button">Search</button>

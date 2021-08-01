@@ -105,3 +105,7 @@ button {
     text-justify: distribute-all-lines;*/
 
 }
+.input {
+  min-width: 95%;
+  max-width: 95%;
+}
