@@ -1,11 +1,12 @@
 import React, { useState, useEffect} from 'react'
 import { useHistory } from "react-router-dom";
 import  { utils, providers } from 'ethers';
+import {getProviderURL} from '../utils/utils.js';
 const { JsonRpcProvider } = providers;
 
 export default function Transaction() {
     const { search } = window.location;
-    const path = window.location.href.split("/");
+    const path = window.location.href.split("/");    
     let searchHash ="";  
     if(!search.toString().includes("?s=")){
       searchHash = path[path.length - 1];
@@ -36,7 +37,7 @@ export default function Transaction() {
 
     useEffect(() => {
         (async () => {
-          const provider = new JsonRpcProvider("https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb");
+          const provider = new JsonRpcProvider(getProviderURL());
           const blockChainInfo = await provider.getTransaction(searchHash);
           console.log('transaction searched:',blockChainInfo);
           setblockHash(blockChainInfo.blockHash)

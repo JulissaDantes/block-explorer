@@ -1,13 +1,15 @@
 import React, { useState, useEffect  }  from 'react'
 import  { utils, providers } from 'ethers';
-import '../assets/css/App.css'
+import '../assets/css/App.css';
+import {getProviderURL} from '../utils/utils.js';
 const { JsonRpcProvider } = providers;
 
 export default function Latesttxs() {
     const [transactions, settransactions] = useState([]);
+
     useEffect(() => {
         (async () => {
-          const provider = new JsonRpcProvider("https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb");
+          const provider = new JsonRpcProvider(getProviderURL());
           const latestBlockNum = await provider.getBlockNumber();
           const blockTxs = (await provider.getBlock(latestBlockNum,false)).transactions;
           const txs = []
@@ -15,7 +17,6 @@ export default function Latesttxs() {
             let currentTx = await provider.getTransaction(txHash);            
             txs.push({hash:txHash, from:currentTx.from, to:currentTx.to, value:utils.formatEther(currentTx.value._hex)});
           }
-          console.log('txs:',txs);
           settransactions(txs);          
         })()
       }, [])

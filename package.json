@@ -17,6 +17,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.3.1",
+    "sfcookies": "^1.0.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

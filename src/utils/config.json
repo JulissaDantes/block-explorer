@@ -1,0 +1,7 @@
+{
+    "RINKEBY_URL": "https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb",
+    "MAINNET_URL":"https://mainnet.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb",
+    "ROPSTEN_URL":"https://ropsten.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb",
+    "KOVAN_URL":"https://kovan.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb",
+    "GORLI":"https://goerli.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb"
+  }

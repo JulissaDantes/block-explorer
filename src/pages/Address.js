@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import { useHistory } from "react-router-dom";
 import  { utils, providers } from 'ethers';
+import {getProviderURL} from '../utils/utils.js';
 const { JsonRpcProvider } = providers;
 
 function Address() {
@@ -10,6 +11,7 @@ function Address() {
     const [type, settype] = useState('')
     const [code, setcode] = useState('')
     const [txcount, settxcount] = useState(0);
+
     let searchAccount ="";  
     if(!search.toString().includes("?s=")){
       searchAccount = path[path.length - 1];
@@ -27,7 +29,7 @@ function Address() {
 
     useEffect(() => {
         (async () => {
-          const provider = new JsonRpcProvider("https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb");
+          const provider = new JsonRpcProvider(getProviderURL());
           const blockChainAccount = await provider.getBalance(searchAccount)
           const addressCode = await provider.getCode(searchAccount);
           const txCount = await provider.getTransactionCount(searchAccount);

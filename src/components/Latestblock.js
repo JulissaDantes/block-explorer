@@ -1,6 +1,7 @@
 import React, { useState, useEffect  }  from 'react'
 import  { utils, providers } from 'ethers';
-import '../assets/css/App.css'
+import '../assets/css/App.css';
+import {getProviderURL} from '../utils/utils.js';
 const { JsonRpcProvider } = providers;
 
 
@@ -20,10 +21,10 @@ export default function Latestblock() {
     const [gasUsed, setgasUsed] = useState(0);
     const [timestamp, settimestamp] = useState(0);
     const [transactions, settransactions] = useState([]);
-
+    
     useEffect(() => {
         (async () => {
-          const provider = new JsonRpcProvider("https://rinkeby.infura.io/v3/433a74c66045425ba8fdf7f1cb23ffdb");
+          const provider = new JsonRpcProvider(getProviderURL());
           const latestBlockNum = await provider.getBlockNumber();
           console.log('latest block number', latestBlockNum);
           const block = await provider.getBlock(latestBlockNum,false);
