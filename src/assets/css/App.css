@@ -78,4 +78,11 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 16px; 
+  border-color: cadetblue; 
+}
+
+.go-home-button:hover {
+  background-color: cadetblue; /* Green */
+  color: white;
 }
