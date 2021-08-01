@@ -33,9 +33,9 @@ export default function Latesttxs() {
            <p className="section-header">Latest transactions </p> 
             {transactions.map((transaction) => (
             <div key={transaction.hash}>
-                <p>from: {transaction.from}</p>
-                <p>to: {transaction.to}</p>
-                <p>value: {transaction.value}</p>
+                <p><b>From</b>: {transaction.from}</p>
+                <p><b>To</b>: {transaction.to}</p>
+                <p><b>Value</b>: {transaction.value}</p>
             </div>
             ))}
         </div>

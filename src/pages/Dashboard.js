@@ -42,7 +42,7 @@ const useStyles= makeStyles(()=>({
                         <Searchbar/>
                     </Grid>
                     <Grid item xs={6}>
-                    <Select placeholder={<div>Select Network</div>} options={options} onChange={handleChange}></Select>
+                    <Select placeholder={<div>Select Network</div>} options={options} onChange={handleChange} width="50px"></Select>
                     </Grid>
                     <Grid item xs={6}>
                         <Latestblock/>

@@ -64,19 +64,19 @@ export default function Block() {
                 Block:
             </h1>
             <p>
-             Block Hash: {hash}<br/>
-             Parent Hash: {parentHash}<br/>
-             Nonce: {nonce}<br/>
-             Transactions Root: {transactionsRoot}<br/>
-             State Root: {stateRoot}<br/>
-             Receipts Root: {receiptsRoot}<br/>
-             Miner: {miner}<br/>
-             Difficulty: {difficulty}<br/>
-             Total Difficulty: {totalDifficulty}<br/>
-             Gas Limit: {gasLimit}<br/>
-             Gas Used: {gasUsed}<br/>
-             Timestamp: {timestamp}<br/>
-             Transactions hashes: {transactions.map((tx) => <div>{tx}</div>)}
+             <b>Block Hash</b>: {hash}<br/>
+             <b>Parent Hash</b>: {parentHash}<br/>
+             <b>Nonce</b>: {nonce}<br/>
+             <b>Transactions Root</b>: {transactionsRoot}<br/>
+             <b>State Root</b>: {stateRoot}<br/>
+             <b>Receipts Root</b>: {receiptsRoot}<br/>
+             <b>Miner</b>: {miner}<br/>
+             <b>Difficulty</b>: {difficulty}<br/>
+             <b>Total Difficulty</b>: {totalDifficulty}<br/>
+             <b>Gas Limit</b>: {gasLimit}<br/>
+             <b>Gas Used</b>: {gasUsed}<br/>
+             <b>Timestamp</b>: {timestamp}<br/>
+             <b>Transactions hashes</b>: {transactions.map((tx) => <div>{tx}</div>)}
             </p>
             <br/>
             <button type="button" onClick={handleClick}  className="go-home-button">

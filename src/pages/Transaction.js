@@ -64,22 +64,22 @@ export default function Transaction() {
         <div>
              <div className="App-search-container">
                 <h1 className="section-header">Transaction:</h1>
-                blockHash: {blockHash}<br/>
-                blockNumber: {blockNumber}<br/>
-                confirmations: {confirmations}<br/>
-                data: {data}<br/>
-                from: {from}<br/>
-                gasLimit: {gasLimit}<br/>
-                gasPrice: {gasPrice}<br/>
-                hash: {hash}<br/>
-                networkId: {networkId}<br/>
-                nonce: {nonce}<br/>
-                r: {r}<br/>
-                raw: {raw}<br/>
-                s: {s}<br/>
-                to: {to}<br/>
-                transactionIndex: {transactionIndex}<br/>
-                value: {value}<br/>
+                <b>Block Hash</b>: {blockHash}<br/>
+                <b>Block Number</b>: {blockNumber}<br/>
+                <b>Confirmations</b>: {confirmations}<br/>
+                <b>Data</b>: {data}<br/>
+                <b>From</b>: {from}<br/>
+                <b>Gas Limit</b>: {gasLimit}<br/>
+                <b>Gas Price</b>: {gasPrice}<br/>
+                <b>Hash</b>: {hash}<br/>
+                <b>NetworkId</b>: {networkId}<br/>
+                <b>Nonce</b>: {nonce}<br/>
+                <b>R</b>: {r}<br/>
+                <b>Raw</b>: {raw}<br/>
+                <b>S</b>: {s}<br/>
+                <b>To</b>: {to}<br/>
+                <b>Transaction Index</b>: {transactionIndex}<br/>
+                <b>Value</b>: {value}<br/>
             </div>
             <br/>
             <button  className="go-home-button" type="button" onClick={handleClick}>
