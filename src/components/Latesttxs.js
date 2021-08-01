@@ -11,7 +11,13 @@ export default function Latesttxs() {
         (async () => {
           const provider = new JsonRpcProvider(getProviderURL());
           const latestBlockNum = await provider.getBlockNumber();
-          const blockTxs = (await provider.getBlock(latestBlockNum,false)).transactions;
+          let blockTxs = (await provider.getBlock(latestBlockNum,false)).transactions;
+          //in case the latest block didnt mined transactions
+          while(blockTxs.length < 1){
+            console.log('latest block didnt have txs');
+            const searchBlock = latestBlockNum-1
+            blockTxs = (await provider.getBlock(searchBlock,false)).transactions;
+          }
           const txs = []
           for(let txHash of blockTxs){
             let currentTx = await provider.getTransaction(txHash);            
