@@ -52,8 +52,30 @@ button {
   padding-bottom: 3%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.App-search-container{
+  border-style:solid;
+  align-items: center;
+  width: 50%;
+  border-color: cadetblue;
+  border-radius: 16px;  
+  padding-left: 5%;
+  padding-bottom: 3%;
+  margin-top: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+}
 
 .section-header{
   color:#04AA6D;
   font-weight: bold;
+}
+
+.go-home-button{
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

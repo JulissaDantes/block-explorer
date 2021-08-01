@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { useHistory } from "react-router-dom";
 import  { utils, providers } from 'ethers';
 import {getProviderURL} from '../utils/utils.js';
+import '../assets/css/App.css';
 const { JsonRpcProvider } = providers;
 
 export default function Transaction() {
@@ -61,8 +62,8 @@ export default function Transaction() {
 
     return (
         <div>
-             <div>
-                <h1>Transaction:</h1>
+             <div className="App-search-container">
+                <h1 className="section-header">Transaction:</h1>
                 blockHash: {blockHash}<br/>
                 blockNumber: {blockNumber}<br/>
                 confirmations: {confirmations}<br/>
@@ -81,7 +82,7 @@ export default function Transaction() {
                 value: {value}<br/>
             </div>
             <br/>
-            <button type="button" onClick={handleClick}>
+            <button  className="go-home-button" type="button" onClick={handleClick}>
                 Go home
             </button>
         </div>

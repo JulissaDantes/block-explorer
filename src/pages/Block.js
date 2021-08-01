@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { useHistory } from "react-router-dom";
 import  { utils, providers } from 'ethers';
 import {getProviderURL} from '../utils/utils.js';
+import '../assets/css/App.css';
 const { JsonRpcProvider } = providers;
 
 export default function Block() {
@@ -58,8 +59,8 @@ export default function Block() {
       }, [])
 
     return (
-        <div>
-            <h1>
+        <div className="App-search-container">
+            <h1 className="section-header">
                 Block:
             </h1>
             <p>
@@ -78,7 +79,7 @@ export default function Block() {
              Transactions hashes: {transactions.map((tx) => <div>{tx}</div>)}
             </p>
             <br/>
-            <button type="button" onClick={handleClick}>
+            <button type="button" onClick={handleClick}  className="go-home-button">
                 Go home
             </button>
         </div>

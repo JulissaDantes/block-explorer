@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import { useHistory } from "react-router-dom";
 import  { utils, providers } from 'ethers';
+import '../assets/css/App.css';
 import {getProviderURL} from '../utils/utils.js';
 const { JsonRpcProvider } = providers;
 
@@ -46,15 +47,15 @@ function Address() {
 
     return (
         <div>
-            <div>
-                <h1>Account:</h1>
-              <p>Balance: {balance}</p>
-              <p>Type: {type}</p>
-              <p>Transactions Count:{txcount}</p>
-              {code !== "0x"?(<p>Code: {code}</p>):(<p></p>)}              
+            <div className="App-search-container">
+                <h1 className="section-header">Account:</h1>
+              <p><b>Balance</b>: {balance}</p>
+              <p><b>Type</b>: {type}</p>
+              <p><b>Transactions Count</b>:{txcount}</p>
+              {code !== "0x"?(<p><b>Code</b>: {code}</p>):(<p></p>)}              
             </div>
             <br/>
-            <button type="button" onClick={handleClick}>
+            <button type="button" onClick={handleClick} className="go-home-button">
                 Go home
             </button>
         </div>
