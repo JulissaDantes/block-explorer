@@ -114,3 +114,10 @@ button {
   border-bottom: dotted;
   margin-right: 5%;
 }
+
+.text-link{
+  color: rgb(99, 180, 153);
+}
+.text-link:hover{
+  color: #61dafb;
+}

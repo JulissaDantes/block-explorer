@@ -51,7 +51,7 @@ function Address() {
                 <h1 className="section-header">Account:</h1>
               <p><b>Balance</b>: {balance}</p>
               <p><b>Type</b>: {type}</p>
-              <p><b>Transactions Count</b>:{txcount}</p>
+              <p><b>Transactions Count</b>: {txcount}</p>
               {code !== "0x"?(<p><b>Code</b>: {code}</p>):(<p></p>)}              
             </div>
             <br/>

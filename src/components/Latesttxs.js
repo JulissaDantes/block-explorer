@@ -2,6 +2,7 @@ import React, { useState, useEffect  }  from 'react'
 import  { utils, providers } from 'ethers';
 import '../assets/css/App.css';
 import {getProviderURL} from '../utils/utils.js';
+import {  Link } from "react-router-dom";
 const { JsonRpcProvider } = providers;
 
 export default function Latesttxs() {
@@ -33,8 +34,9 @@ export default function Latesttxs() {
            <p className="section-header">Latest transactions </p> 
             {transactions.map((transaction) => (
             <div key={transaction.hash} className="tx-display">
-                <p><b>From</b>: {transaction.from}</p>
-                <p><b>To</b>: {transaction.to}</p>
+              <p><b>Transaction Hash</b>:<Link className="text-link" to={`/transaction/${transaction.hash}`}>{transaction.hash}</Link></p>
+                <p><b>From</b>: <Link className="text-link" to={`/address/${transaction.from}`}>{transaction.from}</Link></p>
+                <p><b>To</b>: <Link className="text-link" to={`/address/${transaction.to}`}>{transaction.to}</Link></p>
                 <p><b>Value</b>: {transaction.value}</p>
             </div>
             ))}
