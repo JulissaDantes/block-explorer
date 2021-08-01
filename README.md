@@ -1,11 +1,11 @@
+# Info about this particular Block Explorer
+This block explorer allows the user to filter using either block number, transaction hash, or address. On the main home page you will always find the latest mined block and the latest transactions with links to view info related to the full transaction and the involved addresses. And the user will be able to select with network it wants to look into.
+
+Enjoy the experience and **dont forget to read the footer**.
+
 # Info about the project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# Info about the Block Explorer
-This block explorer allows the user to filter using either block number, transaction hash, or address. On the main home page you will always find the latest mined block and the latest transactions with links to view info related to the full transaction and the involved addresses. And the user will be able to select with network it wants to look into.
-
-Enjoy the experience and dont forget to read the footer
 
 ## Available Scripts
 
