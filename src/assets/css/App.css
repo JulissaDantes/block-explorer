@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  height: 40px;
+  margin: 4px;
+  padding: 4px;
+  font-size: 24px;
+}
+
+.App-container{
+  border-style:solid;
+  border-color: cadetblue;
+  border-radius: 16px;  
+  padding-left: 5%;
+  padding-bottom: 3%;
+}
+
+.section-header{
+  color:#04AA6D;
+  font-weight: bold;
+}

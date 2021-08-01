@@ -1,5 +1,6 @@
 import React, { useState, useEffect  }  from 'react'
 import  { utils, providers } from 'ethers';
+import '../assets/css/App.css'
 const { JsonRpcProvider } = providers;
 
 
@@ -44,8 +45,8 @@ export default function Latestblock() {
       }, [])
 
     return (
-        <div>
-             <p>Latest block:{number}</p>  
+        <div className="App-container">
+             <p className="section-header">Latest block: {number}</p>  
              Hash: {hash}<br/>
              Parent Hash: {parentHash}<br/>
              Nonce: {nonce}<br/>

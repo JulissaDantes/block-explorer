@@ -1,5 +1,6 @@
 import React, { useState, useEffect  }  from 'react'
 import  { utils, providers } from 'ethers';
+import '../assets/css/App.css'
 const { JsonRpcProvider } = providers;
 
 export default function Latesttxs() {
@@ -21,8 +22,8 @@ export default function Latesttxs() {
 
 
     return (
-        <div>
-            Latest transactions 
+        <div className="App-container">
+           <p className="section-header">Latest transactions </p> 
             {transactions.map((transaction) => (
             <div key={transaction.hash}>
                 <p>from: {transaction.from}</p>

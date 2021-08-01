@@ -1,14 +1,7 @@
 import React ,{ useState }from 'react'
-import { useHistory} from "react-router-dom";
 import Select from 'react-select';
 
 function SearchBar(){        
-    let history = useHistory();
-
-    function handleClick() {
-        //todo search from the dropdown to see what is being looked for
-        history.push({pathname:"/address",search:""});
-    }
 
     function handleChange(e) {
         setcriteria(e.value);
