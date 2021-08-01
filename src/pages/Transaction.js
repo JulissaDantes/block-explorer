@@ -5,7 +5,13 @@ const { JsonRpcProvider } = providers;
 
 export default function Transaction() {
     const { search } = window.location;
-    const searchHash = new URLSearchParams(search).get('s');
+    const path = window.location.href.split("/");
+    let searchHash ="";  
+    if(!search.toString().includes("?s=")){
+      searchHash = path[path.length - 1];
+    }else{
+      searchHash = new URLSearchParams(search).get('s');
+    }
     const [blockHash,setblockHash] = useState(0)
     const [blockNumber,setblockNumber]= useState(0)
     const [confirmations,setconfirmations]= useState(0)

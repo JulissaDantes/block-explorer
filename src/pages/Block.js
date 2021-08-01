@@ -5,7 +5,14 @@ const { JsonRpcProvider } = providers;
 
 export default function Block() {
     const { search } = window.location;
-    const searchNumber = new URLSearchParams(search).get('s');
+    const path = window.location.href.split("/");
+    let searchNumber ="";  
+    if(!search.toString().includes("?s=")){
+      searchNumber = path[path.length - 1];
+    }else{
+      searchNumber = new URLSearchParams(search).get('s');
+    }
+
     const [number, setnumber] = useState(Number(searchNumber));
     const [hash, sethash] = useState(0);
     const [parentHash, setparentHash] = useState(0);
