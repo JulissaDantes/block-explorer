@@ -5,7 +5,7 @@ import Searchbar from "../components/Searchbar";
 import Latestblock from "../components/Latestblock";
 import Latesttxs from "../components/Latesttxs";
 import Select from 'react-select';
-import { bake_cookie} from 'sfcookies';
+import { bake_cookie, read_cookie} from 'sfcookies';
 import 'fontsource-roboto';
 import '../assets/css/Dashboard.css';
 
@@ -25,10 +25,11 @@ const useStyles= makeStyles(()=>({
         { value: 'Gorli', label: 'Gorli' }
       ]
  function Dashboard() {
-    const [network, setnetwork] = useState('Mainnet')
+    const prevSelection = (read_cookie("blockExplorerNetwork") !=="")?read_cookie("blockExplorerNetwork"):'Mainnet';
+    const [network, setnetwork] = useState(prevSelection)
     function handleChange(e) {
         bake_cookie("blockExplorerNetwork", e.value);
-        setnetwork(e.value)
+        window.location.reload(false);
     }
     const classes= useStyles();
     return (
