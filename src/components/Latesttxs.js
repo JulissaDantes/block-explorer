@@ -19,6 +19,7 @@ export default function Latesttxs() {
             const searchBlock = latestBlockNum-1
             blockTxs = (await provider.getBlock(searchBlock,false)).transactions;
           }
+          blockTxs = blockTxs.slice(0,10);
           const txs = []
           for(let txHash of blockTxs){
             let currentTx = await provider.getTransaction(txHash);            
